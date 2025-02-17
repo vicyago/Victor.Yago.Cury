@@ -1,0 +1,241 @@
+/* Default Variables (Dark Mode) */
+:root {
+    --bg-color: #222;
+    --text-color: #ffffff;
+    --sidebar-bg: rgba(34, 34, 34, 0.8);
+    --button-bg: rgba(255, 255, 255, 0.1);
+    --button-text: var(--text-color);
+    --frame-border: #ffffff;
+    --frame-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode (overrides if .dark-mode is present) */
+.dark-mode {
+    --bg-color: #222;
+    --text-color: #ffffff;
+    --sidebar-bg: rgba(34, 34, 34, 0.8);
+    --button-bg: rgba(255, 255, 255, 0.1);
+    --button-text: var(--text-color);
+    --frame-border: #ffffff;
+    --frame-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Light Mode */
+.light-mode {
+    --bg-color: #f0f0f0;
+    --text-color: #333;
+    --sidebar-bg: #e0e0e0;
+    --button-bg: rgba(0, 0, 0, 0.1);
+    --button-text: #333;
+    --frame-border: #000000;
+    --frame-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Base Styles */
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+}
+
+.frame-container {
+    border: 1px solid var(--frame-border);
+    margin: 20px;
+    overflow: hidden;
+    box-shadow: var(--frame-shadow);
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 40px);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: auto;
+    transition: background-color 0.3s ease;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: inherit;
+    margin-bottom: -5%;
+    margin-top: -1%;
+}
+
+.title {
+    font-size: 0.8rem;
+    font-weight: lighter;
+    padding-left: 0.5rem;
+    margin-bottom: 2.5rem;
+    color: inherit;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin-bottom: 0.5rem;
+}
+
+.navbar ul li a {
+    color: inherit;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: block;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.navbar ul li a:hover {
+    background-color: rgba(100, 100, 100, 0.1);
+    padding-right: -5%;
+}
+
+/* Content Area Styles */
+.content-area {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    /* Ensures the right div scrolls */
+}
+
+.content {
+    flex-grow: 1;
+    padding: 1% 0 0 40%;
+    overflow-y: auto;
+    /* Additional scrolling for inner content */
+}
+
+section {
+    padding: 80px 20px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 600; /* Bold for headings */
+    font-size: 3rem;
+}
+
+p,
+a,
+button {
+    font-weight: 300; /* Thin for readability */
+}
+
+a {
+    font-size: 0.7rem;
+}
+
+/* Button Styles */
+button {
+    color: var(--button-text);
+    border: none;
+    padding: 12px 24px;
+    font-size: 0.5rem;
+    cursor: pointer;
+    border-radius: 6px;
+    margin: 0.5rem 0;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: center;
+    background-color: var(--button-bg); /* Add this line */
+}
+
+/* Footer Styles */
+footer {
+    text-align: left;
+    font-size: 0.5rem;
+    margin-left: 1rem;
+    margin-top: -1rem;
+    color: var(--text-color);
+}
+
+.content-area,
+.content {
+    -ms-overflow-style: none;
+    /* Hide scrollbar in IE and Edge */
+    scrollbar-width: none;
+    /* Hide scrollbar in Firefox */
+}
+
+.content-area::-webkit-scrollbar,
+.content::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar in Chrome, Safari, and Opera */
+}
+
+#toggleThemeButton {
+    /* Rotate the button 90 degrees */
+    transform: rotate(90deg);
+    transform-origin: center;
+    background-color: transparent; /* keep it transparent */
+    position: fixed;
+    top: 80%;
+    right: 49%;
+    z-index: 10;
+}
+
+#toggleLanguageButton {
+    background-color: transparent;
+    position: fixed;
+    top: 94%;
+    left: 46.5%;
+    z-index: 10;
+}
+
+/* Remove bullet points and purple color from links within the #projects section */
+#projects ul {
+    list-style: none; /* Remove the bullet points */
+    padding-left: 0; /* Remove any default padding that might be indenting the list */
+}
+
+/* Remove dots and purple color from links within the #projects section */
+#projects ul li a {
+    text-decoration: none; /* Remove the underline (dots) */
+    color: inherit; /* Inherit the text color */
+    font-size: 1.5rem;
+}
+
+/* Optional:  If you want the links to have a different color on hover or focus, add these too */
+#projects ul li a:hover,
+#projects ul li a:focus {
+    /* Define your hover/focus styles here */
+    color: rgba(100, 100, 100, 0.1);
+}
+
+#contact a {
+    text-decoration: none; /* Remove the underline (dots) */
+    color: inherit; /* Inherit the text color */
+    font-size: 1.5rem;
+}
+
+#contact a:hover,
+#contact a:focus {
+    /* Define your hover/focus styles here */
+    color: rgba(100, 100, 100, 0.1);
+}
