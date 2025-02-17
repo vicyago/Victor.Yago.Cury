@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Aqui estão alguns dos meus projetos recentes:",
             "contact-me": "Contato",
             "contact-description":
-                "Se você quiser entrar em contato, por favor, envie um e-mail para:",
+                "Para entrar em contato, por favor, envie um e-mail para:",
             "theme-toggle-light": "Mudar para o Modo Claro",
             "theme-toggle-dark": "Mudar para o Modo Escuro",
             "language-toggle-pt": "🇺🇸 English",
