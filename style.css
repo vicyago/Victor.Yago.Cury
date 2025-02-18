@@ -198,15 +198,15 @@ footer {
     background-color: transparent; /* keep it transparent */
     position: fixed;
     top: 80%;
-    right: 49%;
+    right: 47%;
     z-index: 10;
 }
 
 #toggleLanguageButton {
     background-color: transparent;
     position: fixed;
-    top: 94%;
-    left: 46.5%;
+    top: 89%;
+    left: 45%;
     z-index: 10;
 }
 
