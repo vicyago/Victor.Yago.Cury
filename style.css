@@ -359,7 +359,7 @@ footer {
         background-color: transparent; /* keep it transparent */
         position: fixed;
         top: -1%;
-        right: 20%;
+        left: 20%;
         z-index: 10;
     }
 
