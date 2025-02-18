@@ -354,12 +354,12 @@ footer {
 
     #toggleThemeButton {
         /* Rotate the button 90 degrees */
-        transform: rotate(90deg);
+        transform: rotate(360deg);
         transform-origin: center;
         background-color: transparent; /* keep it transparent */
         position: fixed;
-        top: 35%;
-        right: 45%;
+        top: 20%;
+        right: 20%;
         z-index: 10;
     }
 
@@ -376,6 +376,6 @@ footer {
     #toggleThemeButton:hover,
     #toggleLanguageButton:focus {
         /* Define your hover/focus styles here */
-        color: rgb(255, 166, 0);
+        color: rgb(221, 148, 12);
     }
 }
