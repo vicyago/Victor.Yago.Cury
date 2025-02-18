@@ -282,7 +282,7 @@ footer {
     }
 
     .navbar ul li {
-        margin-bottom: 0; /* Remove bottom margin */
+        margin-bottom: 5rem; /* Remove bottom margin */
         margin-right: 0; /* Remove right margin (if any) */
         flex-grow: 1;
         text-align: center;
@@ -306,7 +306,6 @@ footer {
 
     .sidebar {
         width: 100%; /* Full width on mobile */
-        min-height: 15vh;
         position: sticky; /* Stick to the top */
         top: 0;
         z-index: 2; /* Ensure it stays on top */
