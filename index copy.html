@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav class="nav-main">
+            <h1 class="nav-logo">Victor Yago</h1>
+
+            <!-- Hamburger Menu Button -->
+            <button class="hamburguer-button" aria-controls="hamburguer-menu" aria-expanded="false"
+                aria-label="Toggle Menu">
+                <span class="hamburguer"></span>
+                <span class="hamburguer"></span>
+                <span class="hamburguer"></span>
+            </button>
+        </nav>
+
+        <!-- Hamburger Menu -->
+        <nav id="hamburguer-menu" class="hamburguer-menu">
+            <ul>
+                <li><a href="#home" data-translate="home">Home</a></li>
+                <li><a href="#about" data-translate="about">About</a></li>
+                <li><a href="#projects" data-translate="projects">Projects</a></li>
+                <li><a href="#contact" data-translate="contact">Contact</a></li>
+                <li>
+                    <button id="toggleThemeButton" aria-label="Toggle Light/Dark Mode"></button>
+                </li>
+                <li>
+                    <button id="toggleLanguageButton" aria-label="Toggle Language"></button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <section id="home" class="content-section">
+            <h2 data-translate="welcome">Welcome to My Portfolio</h2>
+            <p data-translate="home-description">Explore my projects and experiments in web design.</p>
+        </section>
+
+        <section id="about" class="content-section">
+            <h2 data-translate="about-me">About Me</h2>
+            <p data-translate="about-description">I am a web designer and developer with a passion for creating
+                beautiful and
+                functional websites.</p>
+        </section>
+
+        <section id="projects" class="content-section">
+            <h2 data-translate="my-projects">My Projects</h2>
+            <p data-translate="projects-description">Here are some of my recent projects:</p>
+            <ul>
+                <li><a target="_blank" rel="noopener noreferrer" href="https://blueberrycamisetas.com.br/">BlueBerry
+                        Camisetas</a></li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="https://vicyago.github.io/Ayaosha.morenogato.com/">Morenogato.com</a></li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="https://vicyago.github.io/AyioshaAvellarSite/">Ayiosha Avellar</a></li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="https://vicyago.github.io/ArteDeFermentarOfficial/">Arte de Fermentar</a></li>
+                <li><a target="_blank" rel="noopener noreferrer" href="https://vicyago.github.io/OticaVibes/">Ótica
+                        Vibes</a></li>
+            </ul>
+        </section>
+
+        <section id="contact" class="content-section">
+            <h2 data-translate="contact-me">Contact Me</h2>
+            <p data-translate="contact-description">
+                If you'd like to get in touch, please reach out via email at:
+            </p>
+            <a href="mailto:victoryagoc@gmail.com">victoryagoc@gmail.com</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Victor Yago Cury</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

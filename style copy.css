@@ -1,0 +1,291 @@
+/* style.css */
+
+:root {
+    --bg-color: #f0f0f0;
+    --text-color: #333;
+    --accent-color: #007bff;
+    --border-color: #ccc;
+    --button-bg: #eee;
+    --button-text: #333;
+    --font-family: 'Poppins', sans-serif;
+}
+
+.dark-mode {
+    --bg-color: #222;
+    --text-color: #f0f0f0;
+    --accent-color: #6cb4ee;
+    --border-color: #444;
+    --button-bg: #333;
+    --button-text: #f0f0f0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header and Navigation */
+header {
+    background-color: var(--bg-color);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky; /* Keeps the header at the top */
+    top: 0;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+.nav-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hamburger Button */
+.hamburguer-button {
+    display: none;  /* Hidden by default */
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.hamburguer-button:hover {
+    color: var(--accent-color);
+}
+
+.hamburguer {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hamburger Menu (Hidden by Default) */
+.hamburguer-menu {
+    display: none;  /* Hidden by default */
+    position: absolute;  /* Positioned absolutely */
+    top: 100%;  /* Below the header */
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; /* Added transform */
+}
+
+.hamburguer-menu.active {
+    display: block;
+}
+
+.hamburguer-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.hamburguer-menu li {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s ease;
+}
+
+.hamburguer-menu li:last-child {
+    border-bottom: none;
+}
+
+.hamburguer-menu a,
+.hamburguer-menu button {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    transition: color 0.3s ease, background-color 0.2s ease;
+    background-color: transparent; /* Ensure button background is transparent */
+    border: none;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.hamburguer-menu a:hover,
+.hamburguer-menu button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: var(--accent-color);
+}
+
+/* Main Content */
+main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-section {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.content-section:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Buttons (Theme & Language) */
+button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0.5rem;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    border-top: 1px solid var(--border-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburguer-button {
+        display: block; /* Show the button on smaller screens */
+    }
+
+    .nav-logo {
+        margin-right: auto; /* Push logo to the left */
+    }
+
+    /* Hamburger Icon Animation (simplified) */
+    .hamburguer-button {
+        padding: 0.25rem; /* reduce padding */
+    }
+
+    .hamburguer {
+      background-color: var(--text-color);
+      width: 20px;
+      height: 2px;
+    }
+
+    .hamburguer:nth-child(1) {
+      transform-origin: top left;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .hamburguer:nth-child(2) {
+      margin: 4px 0;
+    }
+
+    .hamburguer:nth-child(3) {
+      transform-origin: bottom left;
+      transition: transform 0.2s ease-in-out;
+    }
+
+
+    .hamburguer-button[aria-expanded="true"] .hamburguer:nth-child(1) {
+        transform: rotate(45deg) translate(3px, 3px);
+    }
+
+    .hamburguer-button[aria-expanded="true"] .hamburguer:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburguer-button[aria-expanded="true"] .hamburguer:nth-child(3) {
+        transform: rotate(-45deg) translate(3px, -3px);
+    }
+
+    .hamburguer-menu {
+        position: absolute; /* Essential for correct positioning */
+        top: 100%; /* Below the header */
+        left: 0;
+        width: 100%;
+        z-index: 99;
+        background-color: var(--bg-color);
+        border-bottom: 1px solid var(--border-color);
+        display: none;  /* Ensure it's hidden by default when not active */
+        transform: translateY(0);  /* Reset translation */
+        transition: transform 0.3s ease, background-color 0.3s ease; /* Add transform to the transition */
+    }
+
+
+    .hamburguer-menu.active {
+        display: block; /* Show the menu when active */
+    }
+
+
+    /* Content Padding */
+    .content-section {
+        padding: 1rem 0;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}

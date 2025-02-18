@@ -12,6 +12,7 @@
 /* Dark Mode (overrides if .dark-mode is present) */
 .dark-mode {
     --bg-color: #222;
+    --bgm-color:  #ff990096;
     --text-color: #ffffff;
     --sidebar-bg: rgba(34, 34, 34, 0.8);
     --button-bg: rgba(255, 255, 255, 0.1);
@@ -23,6 +24,7 @@
 /* Light Mode */
 .light-mode {
     --bg-color: #f0f0f0;
+    --bgm-color: #ff990096;
     --text-color: #333;
     --sidebar-bg: #e0e0e0;
     --button-bg: rgba(0, 0, 0, 0.1);
@@ -108,7 +110,7 @@ html {
 }
 
 .navbar ul li a:hover {
-    background-color: rgba(100, 100, 100, 0.1);
+    background-color: var(--bgm-color);
     padding-right: -5%;
 }
 
@@ -170,7 +172,7 @@ button {
 footer {
     text-align: left;
     font-size: 0.5rem;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     margin-top: -1rem;
     color: var(--text-color);
 }
@@ -225,7 +227,7 @@ footer {
 #projects ul li a:hover,
 #projects ul li a:focus {
     /* Define your hover/focus styles here */
-    color: rgba(100, 100, 100, 0.1);
+    color: rgb(255, 166, 0);
 }
 
 #contact a {
@@ -237,73 +239,144 @@ footer {
 #contact a:hover,
 #contact a:focus {
     /* Define your hover/focus styles here */
-    color: rgba(100, 100, 100, 0.1);
+    color: rgb(255, 166, 0);
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-    .container {
-        flex-direction: column; /* Stack sidebar on top */
-    }
-
-    .sidebar {
-        width: 100%;
-        position: relative;
-        text-align: center;
-    }
-
-    .content-area {
-        padding-left: 0;
-    }
-
-    .content {
-        padding: 1rem;
-    }
-}
-
 @media (max-width: 768px) {
-    .sidebar {
-        width: 100%;
-        padding: 1rem;
+    /* General adjustments */
+    body,
+    html {
+        overflow: auto; /* Enable scrolling on mobile */
+    }
+
+    .frame-container {
+        margin: 10px; /* Reduce margin on smaller screens */
+        height: calc(100% - 20px); /* Adjust frame height */
+    }
+
+    .container {
+        flex-direction: column; /* Stack sidebar and content vertically */
+        height: auto; /* Allow container to adjust height */
+    }
+
+    /* Sidebar Styles for Mobile */
+
+    .logo {
+        font-size: 1.5rem; /* Smaller logo */
+        margin-bottom: -0.7rem; /* Reduce spacing */
+    }
+
+    .title {
+        font-size: 0.7rem; /* Smaller title */
+        margin-bottom: 0.5rem; /* Reduce spacing */
+        margin-left: -0.2rem;
     }
 
     .navbar ul {
         display: flex;
-        justify-content: space-around;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 0;
+        margin: 0;
     }
 
     .navbar ul li {
-        margin-bottom: 0;
+        margin-bottom: 0; /* Remove bottom margin */
+        margin-right: 0; /* Remove right margin (if any) */
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .navbar ul li a {
+        padding: 0.3rem; /* Adjust padding */
+        font-size: 0.8rem; /* Reduce font size */
+        display: block; /* Make the entire area clickable */
+    }
+
+    #projects ul li a {
+        font-size: 1rem;
+    }
+
+    /* Content Area Styles for Mobile */
+    .container {
+        flex-direction: column; /* Stack sidebar and content vertically on mobile */
+        height: 100%; /* Ensure container uses full height */
+    }
+
+    .sidebar {
+        width: 100%; /* Full width on mobile */
+        height: 30%;
+        position: sticky; /* Stick to the top */
+        top: 0;
+        z-index: 2; /* Ensure it stays on top */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+        border-bottom: 1px solid var(--frame-border); /* Add the bottom border line */
+    }
+
+    .content-area {
+        flex-grow: 1; /* Take up remaining vertical space */
+        display: flex;
+        flex-direction: column; /* Important: Stack content vertically */
+        overflow-y: auto; /* Enable scrolling for content */
+        width: 100%; /* Ensures content area spans full width */
     }
 
     .content {
-        padding: 1rem;
+        padding: 0 1rem; /* Add padding around content */
+        padding-left: 1rem;
+    }
+    #contact a {
+        font-size: 1rem;
     }
 
-    h1, h2 {
-        font-size: 2rem;
+    /* Adjustments for sections and headings */
+    section {
+        padding: 1rem; /* Reduce padding */
     }
+
+    p,
+    h1,
+    h2,
+    h3 {
+        font-size: 1rem; /* Reduce heading sizes */
+    }
+
+    /* Button Styles for Mobile */
+    button {
+        font-size: 0.7rem; /* Reduce font size */
+    }
+
+    /* Footer Styles for Mobile */
+    footer p {
+        margin-top: 1rem;
+        font-size: 0.5rem; /* Reduce font size */
+    }
+
+    #toggleThemeButton {
+        /* Rotate the button 90 degrees */
+        transform: rotate(90deg);
+        transform-origin: center;
+        background-color: transparent; /* keep it transparent */
+        position: fixed;
+        top: 30%;
+        right: 45%;
+        z-index: 10;
+    }
+
+    #toggleLanguageButton {
+        /* Rotate the button 90 degrees */
+        transform: rotate(90deg);
+        background-color: transparent;
+        position: fixed;
+        top: 4%;
+        left: 44%;
+        z-index: 10;
+    }
+
+#toggleThemeButton:hover,
+#toggleLanguageButton:focus {
+    /* Define your hover/focus styles here */
+    color: rgb(255, 166, 0);
 }
-
-@media (max-width: 480px) {
-    .navbar ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .content {
-        padding: 0.5rem;
-    }
-
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    p, a, button {
-        font-size: 0.9rem;
-    }
 }
