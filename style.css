@@ -264,6 +264,7 @@ footer {
 
     .logo {
         font-size: 1.5rem; /* Smaller logo */
+        margin-top: 0.1rem;
         margin-bottom: -0.7rem; /* Reduce spacing */
     }
 
@@ -359,7 +360,7 @@ footer {
         background-color: transparent; /* keep it transparent */
         position: fixed;
         top: -1%;
-        left: 20%;
+        left: 22%;
         z-index: 10;
     }
 
@@ -368,7 +369,7 @@ footer {
         transform: rotate(90deg);
         background-color: transparent;
         position: fixed;
-        top: 5%;
+        top: 7%;
         left: 44%;
         z-index: 10;
     }
