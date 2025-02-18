@@ -358,7 +358,7 @@ footer {
         transform-origin: center;
         background-color: transparent; /* keep it transparent */
         position: fixed;
-        top: 20%;
+        top: -1%;
         right: 20%;
         z-index: 10;
     }
