@@ -12,7 +12,7 @@
 /* Dark Mode (overrides if .dark-mode is present) */
 .dark-mode {
     --bg-color: #222;
-    --bgm-color:  #ff990096;
+    --bgm-color: #ff990096;
     --text-color: #ffffff;
     --sidebar-bg: rgba(34, 34, 34, 0.8);
     --button-bg: rgba(255, 255, 255, 0.1);
@@ -374,9 +374,9 @@ footer {
         z-index: 10;
     }
 
-#toggleThemeButton:hover,
-#toggleLanguageButton:focus {
-    /* Define your hover/focus styles here */
-    color: rgb(255, 166, 0);
-}
+    #toggleThemeButton:hover,
+    #toggleLanguageButton:focus {
+        /* Define your hover/focus styles here */
+        color: rgb(255, 166, 0);
+    }
 }
