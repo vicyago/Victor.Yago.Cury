@@ -43,6 +43,7 @@ html {
     transition: background-color 0.3s ease, color 0.3s ease;
     font-family: "Poppins", sans-serif;
     overflow: hidden;
+    cursor: url("cursor.png"), auto;
 }
 
 .frame-container {
@@ -64,7 +65,7 @@ html {
     width: 100%;
     height: 100%;
     background: url("../Victor.Yago.Cury/dark-grain-texture.png"); /* Default texture */
-    opacity: 0.2; /* Default transparency */
+    opacity: 0.1; /* Default transparency */
     pointer-events: none; /* Ensure it doesn't block other interactions */
     transition: transform 0.1s ease, opacity 0.2s ease; /* Add transition for smooth effect */
 }
@@ -107,7 +108,7 @@ html {
     font-weight: lighter;
     padding-left: 0.5rem;
     margin-bottom: 2rem;
-    color: inherit;    
+    color: inherit;
     font-family: "Poppins", sans-serif;
 }
 
@@ -127,6 +128,7 @@ html {
     transition: background-color 0.3s ease;
     display: block;
     padding: 0.5rem;
+    cursor: url("hand.png"), auto;
 }
 
 .navbar ul li a:hover {
@@ -187,6 +189,7 @@ button {
     width: 100%;
     text-align: left;
     background-color: transparent;
+    cursor: url("hand.png"), auto;
 }
 
 button:hover {
