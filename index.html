@@ -6,21 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <meta name="description" content="A portfolio showcasing web design projects." />
-    <meta name="keywords" content="web design, portfolio, projects" />
+    <meta name="keywords" content="web design, portfolio, projects." />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link href="../Victor.Yago.Cury/style.css" rel="stylesheet">
-    <!-- Preconnect to Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Load Fonts -->
+    <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Caveat:wght@700&family=Londrina+Outline&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans+Narrow:wght@400;700&family=Strait&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="frame-container">
+        <div class="background-overlay"></div>
         <div class="container">
             <aside class="sidebar">
                 <header>
@@ -28,14 +23,10 @@
                     <h2 class="title">Designer and Developer</h2>
                     <nav class="navbar">
                         <ul>
-                            <li><a href="#home"><span class="arrow">→</span><span data-translate="home">Home</span></a>
-                            </li>
-                            <li><a href="#about"><span class="arrow">→</span><span
-                                        data-translate="about">About</span></a></li>
-                            <li><a href="#projects"><span class="arrow">→</span><span
-                                        data-translate="projects">Projects</span></a></li>
-                            <li><a href="#contact"><span class="arrow">→</span><span
-                                        data-translate="contact">Contact</span></a></li>
+                            <li><a href="#home"><span class="arrow">→</span><span data-translate="home">Home</span></a></li>
+                            <li><a href="#about"><span class="arrow">→</span><span data-translate="about">About</span></a></li>
+                            <li><a href="#projects"><span class="arrow">→</span><span data-translate="projects">Projects</span></a></li>
+                            <li><a href="#contact"><span class="arrow">→</span><span data-translate="contact">Contact</span></a></li>
                         </ul>
                     </nav>
                 </header>
@@ -50,43 +41,26 @@
                     <section id="home">
                         <h2 data-translate="welcome">Welcome to My Portfolio</h2>
                         <p data-translate="home-description">Explore my projects and experiments in web design.</p>
-                        <a class="buttonspc" href="#projects"><span class="arrow">→</span><span
-                                data-translate="projects">Projects</span></a>
+                        <a class="buttonspc" href="#projects"><span class="arrow">→</span><span data-translate="projects">Projects</span></a>
                     </section>
-
                     <section id="about">
                         <h2 data-translate="about-me">About Me</h2>
-                        <p data-translate="about-description">I am a web designer and developer with a passion for
-                            creating beautiful and functional websites.</p>
+                        <p data-translate="about-description">I am a web designer and developer with a passion for creating beautiful and functional websites.</p>
                     </section>
-
                     <section id="projects">
                         <h2 data-translate="my-projects">My Projects</h2>
                         <p data-translate="projects-description">Here are some of my recent projects:</p>
                         <ul>
-                            <li><span data-translate="project-1"></span><span class="arrow">→</span><a target="_blank"
-                                    rel="relation_name" href="https://blueberrycamisetas.com.br/">BlueBerry
-                                    Camisetas</a></li>
-                            <li><span data-translate="project-2"></span><span class="arrow">→</span><a target="_blank"
-                                    rel="relation_name"
-                                    href="https://vicyago.github.io/Ayaosha.morenogato.com/">Morenogato.com</a></li>
-                            <li><span data-translate="project-3"></span><span class="arrow">→</span><a target="_blank"
-                                    rel="relation_name" href="https://vicyago.github.io/AyioshaAvellarSite/">Ayiosha
-                                    Avellar</a></li>
-                            <li><span data-translate="project-3"></span><span class="arrow">→</span><a target="_blank"
-                                    rel="relation_name" href="https://vicyago.github.io/ArteDeFermentarOfficial/">Arte
-                                    de Fermentar</a></li>
-                            <li><span data-translate="project-3"></span><span class="arrow">→</span><a target="_blank"
-                                    rel="relation_name" href="https://vicyago.github.io/OticaVibes/">Ótica Vibes</a>
-                            </li>
+                            <li><span data-translate="project-1"></span><span class="arrow">→</span><a target="_blank" href="https://blueberrycamisetas.com.br/">BlueBerry Camisetas</a></li>
+                            <li><span data-translate="project-2"></span><span class="arrow">→</span><a target="_blank" href="https://vicyago.github.io/Ayaosha.morenogato.com/">Morenogato.com</a></li>
+                            <li><span data-translate="project-3"></span><span class="arrow">→</span><a target="_blank" href="https://vicyago.github.io/AyioshaAvellarSite/">Ayiosha Avellar</a></li>
+                            <li><span data-translate="project-4"></span><span class="arrow">→</span><a target="_blank" href="https://vicyago.github.io/ArteDeFermentarOfficial/">Arte de Fermentar</a></li>
+                            <li><span data-translate="project-5"></span><span class="arrow">→</span><a target="_blank" href="https://vicyago.github.io/OticaVibes/">Ótica Vibes</a></li>
                         </ul>
                     </section>
-
                     <section id="contact">
                         <h2 data-translate="contact-me">Contact Me</h2>
-                        <p data-translate="contact-description">
-                            If you'd like to get in touch, please reach out via email at:
-                        </p>
+                        <p data-translate="contact-description">If you'd like to get in touch, please reach out via email at:</p>
                         <span class="arrow">→</span><a href="mailto:victoryagoc@gmail.com">victoryagoc@gmail.com</a>
                     </section>
                 </main>
@@ -98,8 +72,6 @@
         <p>©Victor Yago Cury</p>
     </footer>
 
-    <script src="../Victor.Yago.Cury/script.js"></script>
-
+    <script src="script.js"></script>
 </body>
-
 </html>

@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "toggleLanguageButton"
     );
 
-    // Translation Dictionary
     const translations = {
         pt: {
             home: "Início",
@@ -16,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Explore meus projetos e experimentos em design web.",
             "about-me": "Sobre Mim",
             "about-description":
-                "Eu sou Designer Gráfico, Designer UX/UI e Desenvolvedor Front-end, com a paixão por criar websites bonitos e funcionais.",
+                "Eu sou um designer e desenvolvedor web com paixão por criar websites bonitos e funcionais.",
             "my-projects": "Meus Projetos",
             "projects-description":
                 "Aqui estão alguns dos meus projetos recentes:",
@@ -37,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Explore my projects and experiments in web design.",
             "about-me": "About Me",
             "about-description":
-                "I am Graphic Designer, UX/UI Designer and Front-end Developer, with a passion for creating beautiful and functional websites.",
+                "I am a web designer and developer with a passion for creating beautiful and functional websites.",
             "my-projects": "My Projects",
             "projects-description": "Here are some of my recent projects:",
             "contact-me": "Contact Me",
@@ -49,9 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     };
 
-    let currentLanguage = localStorage.getItem("language") || "pt"; // Default language to Portuguese
+    let currentLanguage = localStorage.getItem("language") || "pt";
 
-    // Function to translate the text
     function translateText() {
         const elementsToTranslate =
             document.querySelectorAll("[data-translate]");
@@ -65,49 +63,41 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // Update theme toggle button text
+        updateToggleButtonText();
+    }
+
+    function updateToggleButtonText() {
         if (currentLanguage === "pt") {
-            if (document.body.classList.contains("dark-mode")) {
-                toggleThemeButton.textContent =
-                    translations.pt["theme-toggle-light"];
-            } else {
-                toggleThemeButton.textContent =
-                    translations.pt["theme-toggle-dark"];
-            }
+            toggleThemeButton.textContent = document.body.classList.contains(
+                "dark-mode"
+            )
+                ? translations.pt["theme-toggle-light"]
+                : translations.pt["theme-toggle-dark"];
             toggleLanguageButton.textContent =
                 translations.pt["language-toggle-pt"];
         } else {
-            // when currentLanguage is 'en'
-            if (document.body.classList.contains("dark-mode")) {
-                toggleThemeButton.textContent =
-                    translations.en["theme-toggle-light"];
-            } else {
-                toggleThemeButton.textContent =
-                    translations.en["theme-toggle-dark"];
-            }
+            toggleThemeButton.textContent = document.body.classList.contains(
+                "dark-mode"
+            )
+                ? translations.en["theme-toggle-light"]
+                : translations.en["theme-toggle-dark"];
             toggleLanguageButton.textContent =
                 translations.en["language-toggle-en"];
         }
     }
 
-    // Function to toggle the language
     function toggleLanguage() {
-        currentLanguage = currentLanguage === "pt" ? "en" : "pt"; // Toggle between Portuguese and English
-        localStorage.setItem("language", currentLanguage); // Save language preference
+        currentLanguage = currentLanguage === "pt" ? "en" : "pt";
+        localStorage.setItem("language", currentLanguage);
         translateText();
     }
 
-    // Initial translation on page load
     translateText();
 
-    // Theme toggle functionality
     const storedTheme = localStorage.getItem("theme");
     if (storedTheme) {
         document.body.classList.add(storedTheme);
-    } else if (
-        !document.body.classList.contains("dark-mode") &&
-        !document.body.classList.contains("light-mode")
-    ) {
+    } else {
         document.body.classList.add("dark-mode");
     }
 
@@ -121,13 +111,26 @@ document.addEventListener("DOMContentLoaded", () => {
             document.body.classList.add("dark-mode");
             localStorage.setItem("theme", "dark-mode");
         }
-        translateText(); // Update button text after toggling
+        translateText();
     }
 
-    // Event Listeners
     toggleThemeButton.addEventListener("click", toggleTheme);
     toggleLanguageButton.addEventListener("click", toggleLanguage);
 
-    // Initial button text setup
-    translateText();
+    // Mouse movement effect on background overlay
+    document.addEventListener("mousemove", (e) => {
+        const overlay = document.querySelector(".background-overlay");
+
+        const x = e.clientX / window.innerWidth; // Normalized X position (0 to 1)
+        const y = e.clientY / window.innerHeight; // Normalized Y position (0 to 1)
+
+        // Create a slight parallax effect
+        const xOffset = (x - 0.5) * 20; // Horizontal offset
+        const yOffset = (y - 0.5) * 20; // Vertical offset
+        overlay.style.transform = `translate(${xOffset}px, ${yOffset}px) scale(1.05)`; // Move and scale
+
+        // Optionally adjust opacity based on mouse movement too (mild)
+        const opacity = 0.2 + Math.abs(x - 0.5) * 0.1;
+        overlay.style.opacity = opacity; // Set the new opacity
+    });
 });

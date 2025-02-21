@@ -33,7 +33,6 @@
     --frame-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
-/* Base Styles */
 body,
 html {
     height: 100%;
@@ -55,6 +54,24 @@ html {
     flex-direction: column;
     height: calc(100% - 40px);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Important for positioning overlay */
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../Victor.Yago.Cury/dark-grain-texture.png"); /* Default texture */
+    opacity: 0.2; /* Default transparency */
+    pointer-events: none; /* Ensure it doesn't block other interactions */
+    transition: transform 0.1s ease, opacity 0.2s ease; /* Add transition for smooth effect */
+}
+
+.dark-mode .background-overlay {
+    background: url("../Victor.Yago.Cury/light-grain-texture.png"); /* Background for dark mode */
+    opacity: 0.3; /* More pronounced in dark mode */
 }
 
 .container {
@@ -75,10 +92,10 @@ html {
 }
 
 .logo {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bold;
     color: inherit;
-    margin-bottom: -5%;
+    margin-bottom: -10%;
     margin-top: -1%;
     font-family: "Cabin Sketch", serif;
     font-weight: 700;
@@ -86,11 +103,12 @@ html {
 }
 
 .title {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: lighter;
     padding-left: 0.5rem;
-    margin-bottom: 2.5rem;
-    color: inherit;
+    margin-bottom: 2rem;
+    color: inherit;    
+    font-family: "Poppins", sans-serif;
 }
 
 .navbar ul {
@@ -113,7 +131,6 @@ html {
 
 .navbar ul li a:hover {
     color: var(--bgm-color);
-    padding-right: -5%;
     text-decoration: underline; /* Underline the text on hover */
 }
 
@@ -122,15 +139,13 @@ html {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
-    /* Ensures the right div scrolls */
+    overflow-y: auto; /* Ensures the right div scrolls */
 }
 
 .content {
     flex-grow: 1;
     padding: 1% 0 0 30%;
-    overflow-y: auto;
-    /* Additional scrolling for inner content */
+    overflow-y: auto; /* Additional scrolling for inner content */
 }
 
 section {
@@ -159,24 +174,22 @@ button {
 }
 
 a {
-    font-size: 0.7rem;
+    font-size: 1rem;
 }
 
 /* Button Styles */
 button {
     color: var(--button-text);
     border: none;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     cursor: pointer;
     margin: 0.5rem 0;
-    transition: background-color 0.3s ease;
     width: 100%;
     text-align: left;
-    background-color: var(--button-bg); /* Add this line */
+    background-color: transparent;
 }
 
 button:hover {
-    /* Define your hover/focus styles here */
     color: rgb(255, 166, 0);
 }
 
@@ -210,33 +223,22 @@ footer {
     /* Hide scrollbar in Chrome, Safari, and Opera */
 }
 
-#toggleThemeButton {
-    background-color: transparent;
-}
-
-#toggleLanguageButton {
-    background-color: transparent;
-}
-
 /* Remove bullet points and purple color from links within the #projects section */
 #projects ul {
-    list-style: none; /* Remove the bullet points */
-    padding-left: 0; /* Remove any default padding that might be indenting the list */
+    list-style: none;
+    padding-left: 0; /* Remove any default padding */
 }
 
-/* Remove dots and purple color from links within the #projects section */
 #projects ul li a {
     text-decoration: none; /* Remove the underline (dots) */
     color: inherit; /* Inherit the text color */
     font-size: 1.5rem;
 }
 
-/* Optional:  If you want the links to have a different color on hover or focus, add these too */
 #projects ul li a:hover,
 #projects ul li a:focus {
-    /* Define your hover/focus styles here */
     color: rgb(255, 166, 0);
-    text-decoration: underline; /* Underline the text on hover */
+    text-decoration: underline;
 }
 
 #contact a {
@@ -247,14 +249,12 @@ footer {
 
 #contact a:hover,
 #contact a:focus {
-    /* Define your hover/focus styles here */
     color: rgb(255, 166, 0);
-    text-decoration: underline; /* Underline the text on hover */
+    text-decoration: underline;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    /* General adjustments */
     body,
     html {
         overflow: auto; /* Enable scrolling on mobile */
@@ -327,6 +327,7 @@ footer {
         padding: 0 1rem; /* Add padding around content */
         padding-left: 1rem;
     }
+
     #contact a {
         font-size: 1rem;
     }
@@ -342,7 +343,6 @@ footer {
         font-size: 1rem; /* Reduce heading sizes */
     }
 
-    
     h2 {
         font-size: 2rem;
     }
