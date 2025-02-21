@@ -208,6 +208,11 @@ button:hover {
     cursor: url("hand.png"), auto;
 }
 
+.buttonspc span:hover {
+    color: var(--bgm-color);
+    text-decoration: underline; /* Underline the text on hover */
+}
+
 /* Footer Styles */
 footer {
     text-align: left;
