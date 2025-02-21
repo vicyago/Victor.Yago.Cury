@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Explore meus projetos e experimentos em design web.",
             "about-me": "Sobre Mim",
             "about-description":
-                "Eu sou um designer e desenvolvedor web com paixão por criar websites bonitos e funcionais.",
+                "Eu sou Designer Gráfico, Designer UX/UI e Desenvolvedor Front-end, com paixão por criar websites bonitos e funcionais.",
             "my-projects": "Meus Projetos",
             "projects-description":
                 "Aqui estão alguns dos meus projetos recentes:",
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Explore my projects and experiments in web design.",
             "about-me": "About Me",
             "about-description":
-                "I am a web designer and developer with a passion for creating beautiful and functional websites.",
+                "I am a web Graphic Designer, UX/UI Designer e Front-end Developer, with a passion for creating beautiful and functional websites.",
             "my-projects": "My Projects",
             "projects-description": "Here are some of my recent projects:",
             "contact-me": "Contact Me",
