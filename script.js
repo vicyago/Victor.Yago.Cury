@@ -134,3 +134,47 @@ document.addEventListener("DOMContentLoaded", () => {
         overlay.style.opacity = opacity; // Set the new opacity
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const previewBox = document.getElementById("preview-box");
+    const projectLinks = document.querySelectorAll("#projects ul li a");
+
+    const previews = {
+        "BlueBerry Camisetas": {
+            image: "blueberry.png",
+        },
+        "Morenogato.com": {
+            image: "morenogatocom.png",
+        },
+        "Ayiosha Avellar": {
+            image: "ayioshaavellar.png",
+        },
+        "Arte de Fermentar": {
+            image: "artedefermentar.png",
+        },
+        "Ótica Vibes": {
+            image: "oticavibes.png",
+        },
+    };
+
+    projectLinks.forEach((link) => {
+        link.addEventListener("mouseenter", (event) => {
+            const projectName = event.target.innerText.trim();
+            const preview = previews[projectName];
+
+            if (preview) {
+                previewBox.innerHTML = `<img src="${preview.image}" alt="${projectName}">`;
+                previewBox.style.display = "block";
+            }
+        });
+
+        link.addEventListener("mousemove", (event) => {
+            previewBox.style.top = `${event.clientY + 10}px`;
+            previewBox.style.left = `${event.clientX + 10}px`;
+        });
+
+        link.addEventListener("mouseleave", () => {
+            previewBox.style.display = "none";
+        });
+    });
+});

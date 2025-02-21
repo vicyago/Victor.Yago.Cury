@@ -204,6 +204,10 @@ button:hover {
     cursor: url("hand.png"), auto;
 }
 
+.buttonspc a {
+    cursor: url("hand.png"), auto;
+}
+
 /* Footer Styles */
 footer {
     text-align: left;
@@ -245,6 +249,28 @@ footer {
     color: rgb(255, 166, 0);
     text-decoration: underline;
 }
+
+.preview-box {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: none;
+    max-width: 300px;
+    font-size: 0.9rem;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 100;
+}
+
+.preview-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
 
 #contact a {
     text-decoration: none; /* Remove the underline (dots) */
