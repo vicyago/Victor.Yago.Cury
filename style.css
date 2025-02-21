@@ -65,7 +65,7 @@ html {
 
 /* Sidebar Styles */
 .sidebar {
-    width: 250px;
+    width: 30%;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -75,11 +75,14 @@ html {
 }
 
 .logo {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
     color: inherit;
     margin-bottom: -5%;
     margin-top: -1%;
+    font-family: "Cabin Sketch", serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .title {
@@ -106,12 +109,12 @@ html {
     transition: background-color 0.3s ease;
     display: block;
     padding: 0.5rem;
-    border-radius: 4px;
 }
 
 .navbar ul li a:hover {
-    background-color: var(--bgm-color);
+    color: var(--bgm-color);
     padding-right: -5%;
+    text-decoration: underline; /* Underline the text on hover */
 }
 
 /* Content Area Styles */
@@ -125,7 +128,7 @@ html {
 
 .content {
     flex-grow: 1;
-    padding: 1% 0 0 40%;
+    padding: 1% 0 0 30%;
     overflow-y: auto;
     /* Additional scrolling for inner content */
 }
@@ -137,9 +140,15 @@ section {
 }
 
 h1,
-h2,
 h3 {
     font-weight: 600; /* Bold for headings */
+    font-size: 3rem;
+}
+
+h2 {
+    font-family: "Cabin Sketch", serif;
+    font-weight: 700;
+    font-style: normal;
     font-size: 3rem;
 }
 
@@ -157,15 +166,25 @@ a {
 button {
     color: var(--button-text);
     border: none;
-    padding: 12px 24px;
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     cursor: pointer;
-    border-radius: 6px;
     margin: 0.5rem 0;
     transition: background-color 0.3s ease;
     width: 100%;
-    text-align: center;
+    text-align: left;
     background-color: var(--button-bg); /* Add this line */
+}
+
+button:hover {
+    /* Define your hover/focus styles here */
+    color: rgb(255, 166, 0);
+}
+
+.buttonspc {
+    color: inherit;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: transparent;
 }
 
 /* Footer Styles */
@@ -192,22 +211,11 @@ footer {
 }
 
 #toggleThemeButton {
-    /* Rotate the button 90 degrees */
-    transform: rotate(90deg);
-    transform-origin: center;
-    background-color: transparent; /* keep it transparent */
-    position: fixed;
-    top: 80%;
-    right: 47%;
-    z-index: 10;
+    background-color: transparent;
 }
 
 #toggleLanguageButton {
     background-color: transparent;
-    position: fixed;
-    top: 89%;
-    left: 45%;
-    z-index: 10;
 }
 
 /* Remove bullet points and purple color from links within the #projects section */
@@ -228,6 +236,7 @@ footer {
 #projects ul li a:focus {
     /* Define your hover/focus styles here */
     color: rgb(255, 166, 0);
+    text-decoration: underline; /* Underline the text on hover */
 }
 
 #contact a {
@@ -240,6 +249,7 @@ footer {
 #contact a:focus {
     /* Define your hover/focus styles here */
     color: rgb(255, 166, 0);
+    text-decoration: underline; /* Underline the text on hover */
 }
 
 /* Responsive Design */
@@ -263,7 +273,7 @@ footer {
     /* Sidebar Styles for Mobile */
 
     .logo {
-        font-size: 1.5rem; /* Smaller logo */
+        font-size: 2rem; /* Smaller logo */
         margin-top: 0.1rem;
         margin-bottom: -0.7rem; /* Reduce spacing */
     }
@@ -274,25 +284,17 @@ footer {
         margin-left: -0.2rem;
     }
 
-    .navbar ul {
+    .navbar {
+        display: none;
+    }
+
+    .buttonscel {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        width: 60%;
         padding: 0;
         margin: 0;
-    }
-
-    .navbar ul li {
-        margin-bottom: 5rem; /* Remove bottom margin */
-        margin-right: 0; /* Remove right margin (if any) */
-        flex-grow: 1;
-        text-align: center;
-    }
-
-    .navbar ul li a {
-        padding: 0.3rem; /* Adjust padding */
-        font-size: 0.8rem; /* Reduce font size */
-        display: block; /* Make the entire area clickable */
     }
 
     #projects ul li a {
@@ -307,11 +309,10 @@ footer {
 
     .sidebar {
         width: 100%; /* Full width on mobile */
+        height: 50%;
         position: sticky; /* Stick to the top */
         top: 0;
         z-index: 2; /* Ensure it stays on top */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-        border-bottom: 1px solid var(--frame-border); /* Add the bottom border line */
     }
 
     .content-area {
@@ -337,9 +338,13 @@ footer {
 
     p,
     h1,
-    h2,
     h3 {
         font-size: 1rem; /* Reduce heading sizes */
+    }
+
+    
+    h2 {
+        font-size: 2rem;
     }
 
     /* Button Styles for Mobile */
@@ -351,32 +356,5 @@ footer {
     footer p {
         margin-top: 1rem;
         font-size: 0.5rem; /* Reduce font size */
-    }
-
-    #toggleThemeButton {
-        /* Rotate the button 90 degrees */
-        transform: rotate(360deg);
-        transform-origin: center;
-        background-color: transparent; /* keep it transparent */
-        position: fixed;
-        top: -1%;
-        left: 22%;
-        z-index: 10;
-    }
-
-    #toggleLanguageButton {
-        /* Rotate the button 90 degrees */
-        transform: rotate(90deg);
-        background-color: transparent;
-        position: fixed;
-        top: 7%;
-        left: 44%;
-        z-index: 10;
-    }
-
-    #toggleThemeButton:hover,
-    #toggleLanguageButton:focus {
-        /* Define your hover/focus styles here */
-        color: rgb(221, 148, 12);
     }
 }

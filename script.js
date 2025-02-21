@@ -16,15 +16,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Explore meus projetos e experimentos em design web.",
             "about-me": "Sobre Mim",
             "about-description":
-                "Sou designer e desenvolvedor web com paixão por criar websites bonitos e funcionais.",
+                "Eu sou Designer Gráfico, Designer UX/UI e Desenvolvedor Front-end, com a paixão por criar websites bonitos e funcionais.",
             "my-projects": "Meus Projetos",
             "projects-description":
                 "Aqui estão alguns dos meus projetos recentes:",
             "contact-me": "Contato",
             "contact-description":
                 "Para entrar em contato, por favor, envie um e-mail para:",
-            "theme-toggle-light": "Mudar para o Modo Claro",
-            "theme-toggle-dark": "Mudar para o Modo Escuro",
+            "theme-toggle-light": "⚪ Claro",
+            "theme-toggle-dark": "⚫ Escuro",
             "language-toggle-pt": "🇺🇸 English",
         },
         en: {
@@ -37,14 +37,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Explore my projects and experiments in web design.",
             "about-me": "About Me",
             "about-description":
-                "I am a web designer and developer with a passion for creating beautiful and functional websites.",
+                "I am Graphic Designer, UX/UI Designer and Front-end Developer, with a passion for creating beautiful and functional websites.",
             "my-projects": "My Projects",
             "projects-description": "Here are some of my recent projects:",
             "contact-me": "Contact Me",
             "contact-description":
                 "If you'd like to get in touch, please reach out via email at:",
-            "theme-toggle-light": "Switch to Light Mode",
-            "theme-toggle-dark": "Switch to Dark Mode",
+            "theme-toggle-light": "⚪ Light",
+            "theme-toggle-dark": "⚫ Dark",
             "language-toggle-en": "🇧🇷 Português",
         },
     };

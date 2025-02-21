@@ -9,7 +9,14 @@
     <meta name="keywords" content="web design, portfolio, projects" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link href="../Victor.Yago.Cury/style.css" rel="stylesheet">
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Load Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Caveat:wght@700&family=Londrina+Outline&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans+Narrow:wght@400;700&family=Strait&display=swap">
 </head>
 
 <body>
@@ -21,15 +28,21 @@
                     <h2 class="title">Designer and Developer</h2>
                     <nav class="navbar">
                         <ul>
-                            <li><a href="#home"><span data-translate="home">Home</span></a></li>
-                            <li><a href="#about"><span data-translate="about">About</span></a></li>
-                            <li><a href="#projects"><span data-translate="projects">Projects</span></a></li>
-                            <li><a href="#contact"><span data-translate="contact">Contact</span></a></li>
+                            <li><a href="#home"><span class="arrow">→</span><span data-translate="home">Home</span></a>
+                            </li>
+                            <li><a href="#about"><span class="arrow">→</span><span
+                                        data-translate="about">About</span></a></li>
+                            <li><a href="#projects"><span class="arrow">→</span><span
+                                        data-translate="projects">Projects</span></a></li>
+                            <li><a href="#contact"><span class="arrow">→</span><span
+                                        data-translate="contact">Contact</span></a></li>
                         </ul>
                     </nav>
                 </header>
-                <button id="toggleThemeButton">Toggle Light/Dark Mode</button>
-                <button id="toggleLanguageButton">🇧🇷 Português</button>
+                <div class="buttonscel">
+                    <button id="toggleThemeButton">Toggle Light/Dark Mode</button>
+                    <button id="toggleLanguageButton">🇧🇷 Português</button>
+                </div>
             </aside>
 
             <div class="content-area">
@@ -37,6 +50,8 @@
                     <section id="home">
                         <h2 data-translate="welcome">Welcome to My Portfolio</h2>
                         <p data-translate="home-description">Explore my projects and experiments in web design.</p>
+                        <a class="buttonspc" href="#projects"><span class="arrow">→</span><span
+                                data-translate="projects">Projects</span></a>
                     </section>
 
                     <section id="about">
@@ -49,16 +64,21 @@
                         <h2 data-translate="my-projects">My Projects</h2>
                         <p data-translate="projects-description">Here are some of my recent projects:</p>
                         <ul>
-                            <li><span data-translate="project-1"></span><a target="_blank" rel="relation_name"
-                                    href="https://blueberrycamisetas.com.br/">BlueBerry Camisetas</a></li>
-                            <li><span data-translate="project-2"></span><a target="_blank" rel="relation_name"
+                            <li><span data-translate="project-1"></span><span class="arrow">→</span><a target="_blank"
+                                    rel="relation_name" href="https://blueberrycamisetas.com.br/">BlueBerry
+                                    Camisetas</a></li>
+                            <li><span data-translate="project-2"></span><span class="arrow">→</span><a target="_blank"
+                                    rel="relation_name"
                                     href="https://vicyago.github.io/Ayaosha.morenogato.com/">Morenogato.com</a></li>
-                            <li><span data-translate="project-3"></span><a target="_blank" rel="relation_name"
-                                    href="https://vicyago.github.io/AyioshaAvellarSite/">Ayiosha Avellar</a></li>
-                            <li><span data-translate="project-3"></span><a target="_blank" rel="relation_name"
-                                    href="https://vicyago.github.io/ArteDeFermentarOfficial/">Arte de Fermentar</a></li>
-                            <li><span data-translate="project-3"></span><a target="_blank" rel="relation_name"
-                                    href="https://vicyago.github.io/OticaVibes/">Ótica Vibes</a></li>
+                            <li><span data-translate="project-3"></span><span class="arrow">→</span><a target="_blank"
+                                    rel="relation_name" href="https://vicyago.github.io/AyioshaAvellarSite/">Ayiosha
+                                    Avellar</a></li>
+                            <li><span data-translate="project-3"></span><span class="arrow">→</span><a target="_blank"
+                                    rel="relation_name" href="https://vicyago.github.io/ArteDeFermentarOfficial/">Arte
+                                    de Fermentar</a></li>
+                            <li><span data-translate="project-3"></span><span class="arrow">→</span><a target="_blank"
+                                    rel="relation_name" href="https://vicyago.github.io/OticaVibes/">Ótica Vibes</a>
+                            </li>
                         </ul>
                     </section>
 
@@ -67,7 +87,7 @@
                         <p data-translate="contact-description">
                             If you'd like to get in touch, please reach out via email at:
                         </p>
-                        <a href="mailto:victoryagoc@gmail.com">victoryagoc@gmail.com</a>
+                        <span class="arrow">→</span><a href="mailto:victoryagoc@gmail.com">victoryagoc@gmail.com</a>
                     </section>
                 </main>
             </div>
